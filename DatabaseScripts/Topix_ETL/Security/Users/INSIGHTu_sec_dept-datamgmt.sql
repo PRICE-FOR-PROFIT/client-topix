@@ -1,0 +1,3 @@
+﻿CREATE USER [INSIGHT\u_sec_dept-datamgmt]
+  WITHOUT LOGIN
+GO

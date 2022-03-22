@@ -1,0 +1,31 @@
+﻿CREATE TABLE [store].[Think_Items] (
+  [ItemID] [varchar](265) NOT NULL,
+  [item_no] [varchar](255) NULL,
+  [item_desc_1] [varchar](255) NULL,
+  [item_desc_2] [varchar](255) NULL,
+  [prod_cat] [varchar](255) NULL,
+  [prod_cat_desc] [varchar](255) NULL,
+  [mat_cost_type] [varchar](255) NULL,
+  [mat_cost_desc] [varchar](255) NULL,
+  [loc] [varchar](255) NULL,
+  [uom] [varchar](255) NULL,
+  [activity_cd] [varchar](255) NULL,
+  [activity_dt] [date] NULL,
+  [item_note_1] [varchar](255) NULL,
+  [item_note_2] [varchar](255) NULL,
+  [item_note_3] [varchar](255) NULL,
+  [item_note_4] [varchar](255) NULL,
+  [item_note_5] [varchar](255) NULL,
+  [user_def_fld_1] [varchar](255) NULL,
+  [user_def_fld_2] [varchar](255) NULL,
+  [user_def_fld_3] [varchar](255) NULL,
+  [user_def_fld_4] [varchar](255) NULL,
+  [user_def_fld_5] [varchar](255) NULL,
+  [price] [decimal](18, 9) NULL,
+  [avg_cost] [decimal](18, 9) NULL,
+  [last_cost] [decimal](18, 9) NULL,
+  [Company] [varchar](9) NOT NULL,
+  CONSTRAINT [PK_StoreThink_Items] PRIMARY KEY CLUSTERED ([ItemID])
+)
+ON [PRIMARY]
+GO
