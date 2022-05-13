@@ -72,6 +72,6 @@ SELECT [CustomerID]						= 'ClarityRx_' + CAST(NULLIF(TRIM([cus_no]),'NULL')	AS 
       ,[cus_note_4]						= CAST(NULLIF(TRIM([cus_note_4]),'NULL')				AS VARCHAR(100))
       ,[cus_note_5]						= CAST(NULLIF(TRIM([cus_note_5]),'NULL')				AS VARCHAR(100))
       ,[terr]							= CAST(NULLIF(TRIM([terr]),'NULL')					AS VARCHAR(100))
-	  ,[Company]							='ClarityRx'
-FROM raw.Excel_ClarityRx_Customers
+	  ,[Company]						='ClarityRx'
+FROM raw.ClarityRx_Customers
 GO

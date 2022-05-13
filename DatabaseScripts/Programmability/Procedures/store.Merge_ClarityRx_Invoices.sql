@@ -21,8 +21,7 @@ DELETE FROM raw.ClarityRx_Invoices
 WHERE  TRY_CAST(NULLIF(TRIM([request_dt]),'NULL') AS DATE) IS NULL and [request_dt] IS NOT NULL
 */
 
-
-
+TRUNCATE TABLE store.ClarityRx_Invoices
 INSERT INTO store.ClarityRx_Invoices (
 	   [InvoiceID]
       ,[CustomerID]
@@ -150,10 +149,9 @@ SELECT
       ,[sls_amt]				= CAST(NULLIF(TRIM([sls_amt]),'') AS MONEY)
       ,[cost_amt]				= CAST(NULLIF(TRIM([cost_amt]),'') AS MONEY)
 	  ,Company					=  'ClarityRx'
+--select MIN(CAST(inv_dt AS Date)), MAX(CAST(inv_dt AS Date))
 FROM raw.ClarityRx_Invoices
-WHERE TRY_CAST(inv_dt AS Date) > (SELECT MAX(inv_dt) FROM store.ClarityRX_Invoices)
-
-
+WHERE TRY_CAST(inv_dt AS Date) IS NOT NULL
 
 
 

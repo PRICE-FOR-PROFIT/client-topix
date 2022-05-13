@@ -73,5 +73,5 @@ SELECT [CustomerID]						= 'Topix_' + CAST(NULLIF(TRIM([cus_no]),'NULL')			AS VA
       ,[cus_note_5]						= CAST(NULLIF(TRIM([cus_note_5]),'NULL')				AS VARCHAR(100))
       ,[terr]							= CAST(NULLIF(TRIM([terr]),'NULL')						AS VARCHAR(100))
 	  ,[Company]						='Topix'
-FROM raw.Excel_Topix_Customers
+FROM raw.Topix_Customers
 GO
