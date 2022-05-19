@@ -64,6 +64,7 @@
   [DiscountDesc] [varchar](300) NULL,
   [FirstTimeItemPurchasedByCustomer] [varchar](10) NULL,
   [FirstOrderForCustomer] [varchar](10) NULL,
+  [ItemNoCleaned] [varchar](100) NULL,
   CONSTRAINT [PK_Stage_Invoices] PRIMARY KEY CLUSTERED ([InvoiceID])
 )
 ON [PRIMARY]

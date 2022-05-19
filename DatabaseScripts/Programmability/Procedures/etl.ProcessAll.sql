@@ -5,6 +5,7 @@ CREATE PROC [etl].[ProcessAll]
 
 AS
 
+
 -- Placeholders for Merging of the data.
 -- Types are assigned
 -- NULL Values are replaced with Real NULLs
@@ -64,7 +65,9 @@ EXEC stage.UpdateProduct_ReplenixDomesticInternationalLogic
 
 EXEC stage.UpdateInvoicesAndItems_PriceIncrease 
 
+EXEC stage.UpdateInvoicesItemNoCleaned
 
+--EXEC [PFPEXPSQLFCI01\INSTANCE01].DriveServerDB.etl.PreAndPost 630
 
 /*
 select a.Company AS CompanyFromInvoice
@@ -122,6 +125,10 @@ select Company, Year(Inv_dt), Month(Inv_Dt), SUM(sls_amt) as TotalRevenue
 from stage.Invoices 
 group by Company , Year(Inv_dt), Month(Inv_Dt)
 ORDER BY 1,2,3
+
+select distinct item_no, itemNoCleaned
+from stage.Invoices
+where item_no <> itemnocleaned
 
 */
 
